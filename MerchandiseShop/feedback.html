@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+  <meta charset="="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="feed">
+    <div class="navbar">
+      <div class="logo">
+        <h2>BTS MERCHANDISE</h2>
+      </div>
+      <ul class="nav">
+        <li><a href="merchandise.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="active"><a href="#">Feedbacks</a></li>
+
+        <form class="search-form">
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+      </form>
+      </ul>   
+  </div>
+
+<div class="feedback">
+  <h1>Feedback</h1>
+
+  <div class="txtb">
+    <label>Name: </label>
+    <input type="text" name=" " Placeholder="Enter Your Name">
+  </div>
+
+  <div class="txtb">
+    <label>E-mail: </label>
+    <input type="text" name=" " Placeholder="Enter Email">
+  </div>
+
+  <div class="txtb">
+    <label>Message: </label>
+    <textarea></textarea>
+  </div>
+  
+  <div class="txtb">
+    <p style="float: left">Gender</p>
+    <select name="country"size="1">
+<option value="nep" "selected">Female</option>
+<option value="kor">Male</option>
+<option value="in">Others</option></select>
+</div>
+
+    <p style="float: left">Will you shop here again?</p>
+  <label class="radio-inline">
+      <input type="radio" name="optradio" checked>Yes
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">No
+    </label>
+
+<a class="but">Send</a>
+</div>
+    
+  
+
+<script type="text/javascript">
+ var mynav = document.querySelector('.navbar')
+
+window.onscroll = function() {
+
+  // pageYOffset or scrollY
+  if (window.pageYOffset > 0) {
+    mynav.classList.add('scrolled')
+  } else {
+    mynav.classList.remove('scrolled')
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+  <meta charset="="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="contact">
+    <div class="navbar">
+      <div class="logo">
+        <h2>BTS MERCHANDISE</h2>
+      </div>
+      <ul class="nav">
+        <li><a href="merchandise.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li class="active"><a href="#">Contact Us</a></li>
+        <li><a href="feedback.html">Feedbacks</a></li>
+
+        <form class="search-form">
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+      </form>
+      </ul>   
+  </div>
+
+  <div class="wrapper1">
+    <h1><center>Contact Us</center></h1>
+    <div class="border"></div>
+    <div id="error-message"></div>
+
+    <div id="contact-form" onsubmit="return validation()">
+      <div class="input-fields">
+        <input type="text" class="input" placeholder="Name" id="name">
+        <input type="text" class="input" placeholder="EmailAddress" id="email">
+        <input type="text" class="input" placeholder="Phone Number" id="phone">
+        <input type="text" class="input" placeholder="Subject" id="subject">
+      </div>
+      <div class="msg">
+        <textarea id="message" placeholder="Message"></textarea>
+        <div class="btn">
+          <input type="submit">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  function validation{
+    var name = document.getelementById("name").value;
+    var email = document.getelementById("email").value;
+    var phone = document.getelementById("phone").value;
+    var subject = document.getelementById("subject").value;
+    var message = document.getelementById("message").value;
+    var error_message = document.getelementById("error_message");
+    var text;
+
+    error_message.style.padding = "10px";
+
+    if(name.length < 5){
+      text = "Please Enter Valid Name";
+      error_message.innerHTML = text;
+      return false;
+    }
+
+     if(email.indexOf("@") == -1 || email.length < 10){
+      text="Please Enter Correct Email Address";
+      error_message.innerHTML = text;
+      return false;
+    }
+
+     if(isNaN(phone) || phone.length != 10){
+      text = "Please Enter Valid Phone Number";
+      error_message.innerHTML = text;
+      return false;
+    }
+
+    if(subject.length < 10){
+      text = "Please Enter Correct Subject";
+      error_message.innerHTML = text;
+      return false;
+    }
+
+     if(message.length <= 150){
+      text = "Please Enter Valid Message";
+      error_message.innerHTML = text;
+      return false;
+    }
+alert("Form Submitted Successful!")
+return true;
+  }
+  </script>
+</body>
+</html>
